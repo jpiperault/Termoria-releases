@@ -32,7 +32,7 @@ SSH, Bureau à distance (RDP), VNC, Telnet, FTP, port série, shells locaux et c
 - **Commandes enregistrées** (Ctrl+Maj+P), **tunnels SSH** (port local, proxy SOCKS, port distant), **X11**, **reconnexion automatique**.
 - **Notes par session** en Markdown, **identifiants partagés** entre sessions, **outils réseau** (ping, traceroute, test de ports, DNS, Wake-on-LAN).
 - **Supervision** : pastille verte ou rouge et latence pour chaque serveur.
-- **Dossiers et sous-dossiers**, **couleurs par dossier** (repérez la production d'un coup d'œil), thème clair ou sombre, 9 palettes de terminal.
+- **Dossiers et sous-dossiers**, **couleurs par dossier** (repérez la production d'un coup d'œil), thème clair ou sombre, 9 palettes de terminal, en français ou en anglais (selon Windows, ou à votre choix).
 - **Import** depuis `~/.ssh/config`, PuTTY et mRemoteNG.
 
 ![Écran partagé en thème clair](docs/termoria-ecran-partage-clair.png)

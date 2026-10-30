@@ -32,7 +32,7 @@ SSH, Remote Desktop (RDP), VNC, Telnet, FTP, serial port, local shells and web c
 - **Saved commands** (Ctrl+Shift+P), **SSH tunnels** (local port, SOCKS proxy, remote port), **X11**, **automatic reconnection**.
 - **Notes per session** in Markdown, **shared credentials** across sessions, **network tools** (ping, traceroute, port test, DNS, Wake-on-LAN).
 - **Monitoring**: green or red dot and latency for each server.
-- **Folders and sub-folders**, **colours per folder** (spot production at a glance), light or dark theme, 9 terminal palettes.
+- **Folders and sub-folders**, **colours per folder** (spot production at a glance), light or dark theme, 9 terminal palettes, in English or French (following Windows, or your choice).
 - **Import** from `~/.ssh/config`, PuTTY and mRemoteNG.
 
 ![Split screen in light theme](docs/termoria-ecran-partage-clair.png)
