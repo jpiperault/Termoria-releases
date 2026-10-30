@@ -1,62 +1,64 @@
 # Portunia
 
-**Toutes vos connexions distantes dans une seule fenêtre, pour Windows.**
-SSH, Bureau à distance (RDP), VNC, Telnet, FTP, port série, shells locaux et consoles web : une application légère (installateur de moins de 10 Mo), rapide et pensée pour le quotidien des administrateurs.
+**English** · [Français](README.fr.md)
 
-> Portunia s'appelait **Termoria** jusqu'à la version 0.39. Une installation de Termoria passe à Portunia par la mise à jour automatique et garde ses sessions, son coffre et ses réglages.
+**All your remote connections in one window, for Windows.**
+SSH, Remote Desktop (RDP), VNC, Telnet, FTP, serial port, local shells and web consoles: a lightweight app (installer under 10 MB), fast and built for administrators' day-to-day work.
 
-![Portunia : arbre des sessions, terminal SSH et explorateur de fichiers](docs/termoria-sombre.png)
+> Portunia was called **Termoria** until version 0.39. A Termoria install moves to Portunia through the automatic update and keeps its sessions, vault and settings.
 
-## Télécharger
+![Portunia: session tree, SSH terminal and file browser](docs/termoria-sombre.png)
 
-➡️ **[Dernière version](https://github.com/jpiperault/Portunia-releases/releases/latest)** : téléchargez `Portunia_x.y.z_x64-setup.exe` et lancez-le.
+## Download
 
-- Installation pour l'utilisateur courant, **sans droits administrateur**.
-- Windows 10 et 11 (64 bits).
-- Portunia **se met ensuite à jour tout seul** : une bannière propose chaque nouvelle version, rien ne s'installe sans votre accord.
+➡️ **[Latest version](https://github.com/jpiperault/Portunia-releases/releases/latest)**: download `Portunia_x.y.z_x64-setup.exe` and run it.
 
-## Ce que fait Portunia
+- Installs for the current user, **no administrator rights needed**.
+- Windows 10 and 11 (64-bit).
+- Portunia **then updates itself**: a banner offers each new version, nothing is installed without your consent.
 
-**Connexions**
-- **SSH** compatible OpenSSH 10 : clé privée (y compris les clés PuTTY `.ppk`), mot de passe ou agent (Pageant / OpenSSH), serveurs de rebond enchaînés, mode compatibilité pour les anciens équipements.
-- **Bureau à distance (RDP)** dans un onglet, avec presse-papiers partagé et écran adapté à la taille de la fenêtre, ou dans le client Windows au choix.
-- **VNC**, **Telnet**, **port série** (ports COM détectés automatiquement), **FTP / FTPS** et **consoles web**.
-- **Shells locaux** : PowerShell, Invite de commandes, distributions WSL, Git Bash.
-- **Connexion rapide** : tapez `ssh deploy@10.0.1.12`, `rdp srv-01` ou une simple adresse, sans créer de session.
+## What Portunia does
 
-**Au quotidien**
-- **Explorateur de fichiers SFTP** à côté du terminal : glisser-déposer de fichiers et de dossiers entiers, édition d'un fichier distant dans votre éditeur habituel avec renvoi automatique.
-- **Écran partagé** jusqu'à 4 sessions, et **saisie multiple** pour taper la même commande sur plusieurs serveurs.
-- **Commandes enregistrées** (Ctrl+Maj+P), **tunnels SSH** (port local, proxy SOCKS, port distant), **X11**, **reconnexion automatique**.
-- **Notes par session** en Markdown, **identifiants partagés** entre sessions, **outils réseau** (ping, traceroute, test de ports, DNS, Wake-on-LAN).
-- **Supervision** : pastille verte ou rouge et latence pour chaque serveur.
-- **Dossiers et sous-dossiers**, **couleurs par dossier** (repérez la production d'un coup d'œil), thème clair ou sombre, 9 palettes de terminal.
-- **Import** depuis `~/.ssh/config`, PuTTY et mRemoteNG.
+**Connections**
+- **SSH** compatible with OpenSSH 10: private key (PuTTY `.ppk` keys included), password or agent (Pageant / OpenSSH), chained jump hosts, compatibility mode for older equipment.
+- **Remote Desktop (RDP)** in a tab, with shared clipboard and a screen fitted to the window, or in the Windows client if you prefer.
+- **VNC**, **Telnet**, **serial port** (COM ports detected automatically), **FTP / FTPS** and **web consoles**.
+- **Local shells**: PowerShell, Command Prompt, WSL distributions, Git Bash.
+- **Quick connect**: type `ssh deploy@10.0.1.12`, `rdp srv-01` or just an address, without creating a session.
 
-![Écran partagé en thème clair](docs/termoria-ecran-partage-clair.png)
+**Day to day**
+- **SFTP file browser** next to the terminal: drag and drop files and whole folders, edit a remote file in your usual editor with automatic upload.
+- **Split screen** with up to 4 sessions, and **multi-input** to type the same command on several servers.
+- **Saved commands** (Ctrl+Shift+P), **SSH tunnels** (local port, SOCKS proxy, remote port), **X11**, **automatic reconnection**.
+- **Notes per session** in Markdown, **shared credentials** across sessions, **network tools** (ping, traceroute, port test, DNS, Wake-on-LAN).
+- **Monitoring**: green or red dot and latency for each server.
+- **Folders and sub-folders**, **colours per folder** (spot production at a glance), light or dark theme, 9 terminal palettes.
+- **Import** from `~/.ssh/config`, PuTTY and mRemoteNG.
 
-**Bastion Heimdia**
-Portunia se connecte au bastion SSH [Heimdia](https://github.com/jpiperault/Heimdia-releases) : contrôle d'accès, double authentification, comptes des serveurs gardés dans un coffre, sessions enregistrées et journal infalsifiable. Les serveurs autorisés apparaissent dans la barre latérale et s'ouvrent d'un clic.
+![Split screen in light theme](docs/termoria-ecran-partage-clair.png)
 
-**Sécurité**
-- Mots de passe rangés dans le **Gestionnaire d'identifiants Windows**, jamais en clair sur le disque ; données chiffrées dès qu'un mot de passe maître est défini.
-- **Verrouillage** par mot de passe maître ou **Windows Hello**, au démarrage et après inactivité.
-- Clés des serveurs SSH vérifiées : une clé qui change bloque la connexion.
-- Mises à jour **signées**.
+**Heimdia bastion**
+Portunia connects to the [Heimdia](https://github.com/jpiperault/Heimdia-releases) bastion: access control, two-factor sign-in, server accounts kept in a vault, recorded SSH and Remote Desktop sessions, video-like replay and a tamper-evident audit log. Allowed servers appear in the sidebar and open with one click.
 
-## Éditions
+**Security**
+- Passwords stored in the **Windows Credential Manager**, never in clear text on disk; data encrypted as soon as a master password is set.
+- **Lock** with a master password or **Windows Hello**, at startup and after inactivity.
+- SSH server keys checked: a changed key blocks the connection.
+- **Signed** updates.
 
-Portunia est **gratuit pour un usage personnel**, avec tous les protocoles.
+## Editions
 
-- **Pro** : enregistrement des sessions, tableau de bord des serveurs, commande sur plusieurs serveurs, conteneurs Docker et Kubernetes, alertes de supervision, stockage S3.
-- **Équipes** : administration du bastion Heimdia depuis Portunia.
+Portunia is **free for personal use**, with every protocol.
 
-Pendant l'avant-première, toutes les fonctions sont débloquées.
+- **Pro**: session recording, server dashboard, command on several servers, Docker and Kubernetes containers, monitoring alerts, S3 storage.
+- **Teams**: administration and audit of the Heimdia bastion from Portunia (session replay, audit log, web portal).
 
-## Signaler un problème
+During the preview, every feature is unlocked.
 
-Ouvrez une [issue](https://github.com/jpiperault/Portunia-releases/issues) en décrivant ce que vous faisiez, le message affiché et la version de Portunia (en bas à droite de la fenêtre).
+## Reporting a problem
+
+Open an [issue](https://github.com/jpiperault/Portunia-releases/issues) describing what you were doing, the message shown and the Portunia version (bottom right of the window).
 
 ---
 
-© Portunia. Tous droits réservés. Portunia s'appuie sur des logiciels libres (Tauri, russh, IronRDP, xterm.js, vnc-rs…), sous licences MIT et Apache 2.0.
+© Portunia. All rights reserved. Portunia relies on open-source software (Tauri, russh, IronRDP, xterm.js, vnc-rs…), under MIT and Apache 2.0 licences.
